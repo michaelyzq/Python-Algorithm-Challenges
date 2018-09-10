@@ -44,5 +44,20 @@ class Solution(object):
 
         return cls.find_pattern(input[1:len(input)],input[0])
 
-print Solution.find_pattern_input([3, 100, 4, 2])
-
+		
+##
+class Solution2(object):
+    @classmethod
+    def find_pattern_input(cls, input):
+		m = xrange(len(input)-2)
+		for a in m:
+			maxA = float("-inf")
+			for n in input[a:len(input)]:
+				if n > maxA and n >a:
+					maxA = n
+				if n> a and n < maxA:
+					return True
+		return False
+		
+print Solution2.find_pattern_input([3, 100, 4, 2,1])
+print Solution2.find_pattern_input([1,2,3,4,5])

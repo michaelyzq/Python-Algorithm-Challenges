@@ -27,12 +27,22 @@
 input = [1, 2, 3, 4]
 
 n = xrange(len(input)-2)
+class Solution(object):
+    @classmethod
+    def find_pattern_input(cls, input):
+        return cls.find_pattern(input[1:len(input)],input[0])
+    @classmethod
+    def find_pattern(cls,input, a):
+        if len(input)<2:
+            return False
+        maxA = float("-inf")
+        for n in input:
+            if n > maxA and n >a:
+                maxA = n
+            if n> a and n < maxA:
+                return True
 
-def find_pattern(input):
-    for i in n:
-        if input[i]< input[i+2] <input[i+1]:
-            return True
-            break
-    return False
+        return cls.find_pattern(input[1:len(input)],input[0])
 
-print find_pattern(input)
+print Solution.find_pattern_input([3, 100, 4, 2])
+

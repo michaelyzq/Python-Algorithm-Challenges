@@ -13,15 +13,16 @@ Output Format Print the required answer in a single line
 
 '''
 
-size = int(raw_input())
-input  =  raw_input().split(' ')
+size = int(raw_input("First input"))
+input  =  raw_input("second input").split(' ')
 
 a = 0
 b = 0
 count =0
 while b < size-1:
     a = 0
-    while a < size-1:
+    while a < size-1-b:
+        print "compare"
         if int(input[a]) > int(input[a+1]):
             inputa = input[a]
             inputa_p1 = input[a+1]

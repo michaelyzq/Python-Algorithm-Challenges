@@ -1,0 +1,6 @@
+[(v, index) for index, v in enumerate(nums)]
+得到一个（元素，元素位置）的list， list sort 从小到大排列
+
+ while begin < end:
+ begin = begin +1
+ end = end -1

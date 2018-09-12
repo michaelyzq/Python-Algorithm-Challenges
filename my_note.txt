@@ -6,7 +6,18 @@
  begin = begin +1
  end = end -1
  
- 3
+
+ 3D
  import operator
  sorted(output_dict.items(), key=operator.itemgetter(1)
  得到结果是元祖的列表
+=======
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ list(map(lambda x: test(x), a))
+

@@ -24,12 +24,19 @@ class Solution(object):
         :type x: int
         :rtype: bool
         """
-        ns = range(len(x))
-
-        for i in ns:
-            if x[i] != x[len(x)-1-i]:
-                return False
-        return True
+        if x <0:
+            return True
+        a = 0
+        x_copy = x
+        first_loop = True
+        while True:
+            curr = x%10         
+            a = a*10 +curr
+            if x <10:
+                break
+            x = x/10
+            
+            
         
 s = Solution()
 print s.isPalindrome("12321")

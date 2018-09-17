@@ -14,10 +14,20 @@
 =======
  
  
- 
- 
- 
- 
- 
+
+ 4
  list(map(lambda x: test(x), a))
+ 
+ 
+ 5.
+ import time
+from datetime import datetime
+s = "12:03:11"
+newtime = time.strptime(s, '%H:%M:%S')   
+d = "1999-08-28 10:00:00"
+
+newdate = datetime.strptime(d, '%Y-%m-%d %H:%M:%S')
+
+print time.strftime("%H:%M:%S",newtime )
+print newdate.strftime("%Y-%m-%d %H:%M:%S")
 

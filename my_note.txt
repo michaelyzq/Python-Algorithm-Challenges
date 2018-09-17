@@ -31,3 +31,16 @@ newdate = datetime.strptime(d, '%Y-%m-%d %H:%M:%S')
 print time.strftime("%H:%M:%S",newtime )
 print newdate.strftime("%Y-%m-%d %H:%M:%S")
 
+6 双遍历
+def printd(dancers):
+    i = 0
+    m = 0
+    print "hello"
+    while i < len(dancers):
+        m=i
+        while m < len(dancers):
+            if i<m:
+                print (dancers[i],dancers[m])       
+            m = m+1
+        i = i +1
+

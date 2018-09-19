@@ -17,7 +17,8 @@
 
  4
  list(map(lambda x: test(x), a))
- 
+ from functools import reduce
+reduce((lambda x, y: x * y), nums)
  
  5.
  import time
@@ -32,17 +33,9 @@ print time.strftime("%H:%M:%S",newtime )
 print newdate.strftime("%Y-%m-%d %H:%M:%S")
 
 6 双遍历
-def printd(dancers):
-    i = 0
-    m = 0
-    print "hello"
-    while i < len(dancers):
-        m=i
-        while m < len(dancers):
-            if i<m:
-                print (dancers[i],dancers[m])       
-            m = m+1
-        i = i +1
+for i in range(0, len(nums)-1):
+    for j in range(i+1, len(nums)):
+        print (i,j)
 
 7 test = abcd = test[0:] = test[:len(test)
 	b = [0,1,2,3]
@@ -50,3 +43,48 @@ list 第i个不要
 for i in range(0,len(b)):
     print b[:i]+b[i+1:]
     ]
+
+for i in range(0, len(nums)-1):
+    for j in range(i+1, len(nums)):
+        print (i,j)
+
+7 test = abcd = test[0:] = test[:len(test)]
+
+
+
+
+
+
+8threesum
+
+[不考虑，不考虑，i,left,*,*,right]
+for i in range(lennums):
+        left =i+1
+        right =lennums-1
+		
+		while left<right:
+                sumthree = nums[i]+nums[left]+nums[right]
+                if sumthree==0:
+                    res_col = [nums[i],nums[left],nums[right]]
+                    res.append(res_col)
+                    left+=1
+                    right-=1
+					
+			                 
+                if sumthree<0:
+                    left+=1
+                if sumthree>0:
+                    right-=1
+
+9linkedlist
+class Node:
+    def __init__(self, dataval=None):
+        self.dataval = dataval
+        self.nextval = None
+class SLinkedList:
+    def __init__(self):
+        self.headval = None
+	while printval is not None:
+            print (printval.dataval)
+            printval = printval.nextval
+

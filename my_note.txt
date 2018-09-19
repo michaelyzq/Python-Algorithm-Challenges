@@ -44,4 +44,9 @@ def printd(dancers):
             m = m+1
         i = i +1
 
-7 test = abcd = test[0:] = test[:len(test)]
+7 test = abcd = test[0:] = test[:len(test)
+	b = [0,1,2,3]
+list 第i个不要
+for i in range(0,len(b)):
+    print b[:i]+b[i+1:]
+    ]

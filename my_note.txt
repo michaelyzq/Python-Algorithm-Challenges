@@ -17,7 +17,8 @@
 
  4
  list(map(lambda x: test(x), a))
- 
+ from functools import reduce
+reduce((lambda x, y: x * y), nums)
  
  5.
  import time

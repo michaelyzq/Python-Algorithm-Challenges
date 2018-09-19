@@ -45,3 +45,30 @@ def printd(dancers):
         i = i +1
 
 7 test = abcd = test[0:] = test[:len(test)]
+
+
+
+
+
+
+8threesum
+
+[不考虑，不考虑，i,left,*,*,right]
+for i in range(lennums):
+        left =i+1
+        right =lennums-1
+		
+		while left<right:
+                sumthree = nums[i]+nums[left]+nums[right]
+                if sumthree==0:
+                    res_col = [nums[i],nums[left],nums[right]]
+                    res.append(res_col)
+                    left+=1
+                    right-=1
+					
+			                 
+                if sumthree<0:
+                    left+=1
+                if sumthree>0:
+                    right-=1
+

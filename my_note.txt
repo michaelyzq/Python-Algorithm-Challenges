@@ -64,3 +64,14 @@ for i in range(lennums):
                 if sumthree>0:
                     right-=1
 
+9linkedlist
+class Node:
+    def __init__(self, dataval=None):
+        self.dataval = dataval
+        self.nextval = None
+class SLinkedList:
+    def __init__(self):
+        self.headval = None
+	while printval is not None:
+            print (printval.dataval)
+            printval = printval.nextval

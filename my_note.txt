@@ -2,33 +2,30 @@
 得到一个（元素，元素位置）的list， list sort 从小到大排列
 
 2.
- while begin < end:
- begin = begin +1
- end = end -1
+while begin < end:
+begin = begin +1
+end = end -1
  
 
- 3D
- import operator
- sorted(output_dict.items(), key=operator.itemgetter(1)
- 得到结果是元祖的列表
-=======
- 
- 
+3
+import operator
+sorted(output_dict.items(), key=operator.itemgetter(1)
+得到结果是元祖的列表
 
- 4
- list(map(lambda x: test(x), a))
- from functools import reduce
+ 
+4
+list(map(lambda x: test(x), a))
+from functools import reduce
 reduce((lambda x, y: x * y), nums)
  
- 5.
- import time
+5.
+import time
 from datetime import datetime
 s = "12:03:11"
 newtime = time.strptime(s, '%H:%M:%S')   
 d = "1999-08-28 10:00:00"
 
 newdate = datetime.strptime(d, '%Y-%m-%d %H:%M:%S')
-
 print time.strftime("%H:%M:%S",newtime )
 print newdate.strftime("%Y-%m-%d %H:%M:%S")
 
@@ -38,11 +35,11 @@ for i in range(0, len(nums)-1):
         print (i,j)
 
 7 test = abcd = test[0:] = test[:len(test)
-	b = [0,1,2,3]
 list 第i个不要
+b = [0,1,2,3]
 for i in range(0,len(b)):
-    print b[:i]+b[i+1:]
-    ]
+  print b[:i]+b[i+1:]
+]
 
 for i in range(0, len(nums)-1):
     for j in range(i+1, len(nums)):
@@ -51,26 +48,19 @@ for i in range(0, len(nums)-1):
 7 test = abcd = test[0:] = test[:len(test)]
 
 
-
-
-
-
 8threesum
 
 [不考虑，不考虑，i,left,*,*,right]
 for i in range(lennums):
         left =i+1
-        right =lennums-1
-		
+        right =lennums-1	
 		while left<right:
                 sumthree = nums[i]+nums[left]+nums[right]
                 if sumthree==0:
                     res_col = [nums[i],nums[left],nums[right]]
                     res.append(res_col)
                     left+=1
-                    right-=1
-					
-			                 
+                    right-=1							                 
                 if sumthree<0:
                     left+=1
                 if sumthree>0:

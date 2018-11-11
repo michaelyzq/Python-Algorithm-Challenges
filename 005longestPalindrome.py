@@ -1,42 +1,44 @@
-#https://leetcode.com/problems/longest-palindromic-substring/
-nput= "babbad"
-input2 = "abcbae"
-import operator
+"""
+https://leetcode.com/problems/longest-palindromic-substring/description/
+Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
 
+Example 1:
+
+Input: "babad"
+Output: "bab"
+Note: "aba" is also a valid answer.
+Example 2:
+
+Input: "cbbd"
+Output: "bb"
+"""
 class Solution(object):
     def longestPalindrome(self, s):
         """
         :type s: str
         :rtype: str
         """
-        palin_dict = {}
-        for n in xrange(len(s)-1):
-            i = 1
-            text = s[n]
-            if s[n] <> s[n+1]:
-                while n-i>=0 and n+i<=len(s)-1:            
-                    if s[n-i] == s[n+i]:
-                        text = s[n-i] + text +s[n+i]
-                        palin_dict[n] = text
-                    else:
-                        break
-                    i = i+1    
-            else:
-                 text = s[n]+ s[n+1]
-                 while n-i>=0 and n+i<=len(s)-1:            
-                    if s[n-i] == s[n+1+i]:
-                        text = s[n-i] + text +s[n+1+i]
-                        palin_dict[n] = text
-                    else:
-                        break
-                    i = i+1 
-                
-         
-        output = ""
-        for item in palin_dict.items():
-            if len(item[1]) > len(output):
-                output = item[1]
-        print output
- 
-s = Solution()
-s.longestPalindrome(input2)
+        if not s:
+            return ""
+        longest = s[0]
+        i = 0
+        while i < len(s):
+            p =1
+            while i+p <len(s) and s[i] == s[i+p]:
+                p = p+1
+            temp_s = s[i:i+p]
+            if len(temp_s) > len(longest):
+                longest = temp_s
+            k=1
+            while i+p-1+k <len(s) and i-k >=0:
+                if s[i-k]== s[i+p-1+k]:
+                    temp_s = s[i-k]+temp_s+s[i+p-1+k]
+                    if len(temp_s) > len(longest):
+                        longest = temp_s
+                else:
+                    break
+                k = k+1
+            i = i+p
+              
+        return longest
+        
